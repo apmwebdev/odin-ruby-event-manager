@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+  </head>
+  <body>
+    <table>
+      <th>Name</th><th>Phone Number</th><th>Reg Time</th>
+      <% contents.each do |person| %>
+        <tr>
+          <td><%= "#{person[:first_name]}" %></td>
+          <td><%= "#{clean_phone_number(person[:homephone])}" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
